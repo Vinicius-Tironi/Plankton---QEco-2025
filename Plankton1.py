@@ -31,7 +31,7 @@ m_T = 0.1    # mortality of T
 # --- System of ODEs ---
 def system(t, y):
     F, Z, T = y
-    I_val = I_0 * np.exp(-(k1 * F) + k2 * C + kb)
+    I_val = I_0 * np.exp(-(k1*F + k2*C + kb))
     N_bar = (N / (N + N_H))
 
     dFdt = (
